@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <title> Основная страница </title>
+    </head>
+    <body>
+        <h2> Гиперссылки: </h2>
+        <ol>
+            <li> 
+                <a href="http://example.com/"> 
+                    Абсолютная гиперссылка на главную 
+                    страницу сайта example.com 
+                </a> 
+            </li>
+            <li> 
+                <a href="https://example.com/"> 
+                    Абсолютная гиперссылка на главную страницу 
+                    сайта example.com в протоколе https 
+                </a> 
+            </li>
+            <li> 
+                <a href="ftp://ftp.mccme.ru"> 
+                    Ссылка на файл на сервере FTP без авторизации 
+                </a> 
+            </li>
+            <li> 
+                <a href="tp://artem:123@ftp.mccme.ru"> 
+                    Ссылка на файл на сервере FTP с авторизацией 
+                </a> 
+            </li>
+            <li> 
+                <a href="https://ru.wikipedia.org/wiki/Настоящие_тюлени
+                    #Образ_жизни_и_питание"> 
+                    Cсылка на фрагмент страницы некоторого сайта 
+                </a> 
+            </li>
+            <li> 
+                <a href="#Какой_то_фрагмент_страницы" > 
+                    Ссылка на фрагмент текущей страницы 
+                </a> 
+            </li>
+            <li> 
+                <a href="http://example.com/?a=10&b=15">
+                    Cсылка с двумя параметрами в URL 
+                </a> 
+            </li>
+            <li>
+                <p>
+                    Список ссылок основной навигации сайта 
+                    с подписями title:
+                </p>
+                <p>
+                    Вы сейчас на основной странице.
+                    Ниже приведён список остальных страниц,
+                    которые использовались в этих заданиях.
+                </p>
+                <ul>
+                    <li>
+                        <label>
+                            <a href="./second_page.html"
+                                title="Страница 2">
+                                Страница 2
+                            </a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <a href="./about/third_page.html"
+                                title="Страница 3">
+                                Страница 3
+                            </a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <a href="./dir1/fourth_page.html"
+                                title="Страница 4">
+                                Страница 4
+                            </a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <a href="./dir1/subdir1/fifth_page.html"
+                                title="Страница 5">
+                                Страница 5
+                            </a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <a href="./sixth_page.html"
+                                title="Страница 6">
+                                Страница 6
+                            </a>
+                        </label>
+                    </li>
+                </ul>
+                    Cписок ссылок основной навигации сайта 
+                    с подписями title 
+                </a> 
+            </li>
+            <li> <a> Ссылка без href </a> </li>
+            <li> <a href=""> Ссылка с пустым href </a> </li>
+            <li> 
+                <a href="http://example.com/" 
+                    rel="nofollow"> 
+                    Cсылка, по которой запрещен переход поисковикам 
+                </a> 
+            </li>
+            <li> 
+                <!--noindex--> 
+                    <a href="http://example.com/" 
+                        rel="nofollow"> 
+                        Cсылка, запрещенную для индексации поисковиками 
+                    </a> 
+                <!--/noindex--> 
+            </li>
+            <li>
+                <p>
+                    Тут есть 
+                    <a href="http://example.com/"> 
+                        контекстная ссылка в тексте абзаца 
+                    </a> 
+                    и на неё можно нажать
+                </p>
+            </li>
+            <li>
+                Ссылка-изображение:
+                <br>
+                <a href="https://ru.wikipedia.org/wiki/Настоящие_тюлени"> 
+                    <img src="res/seal.jpg"
+                        width="412"
+                        height="273" />
+                 </a>
+            </li>
+            <li>
+                Ссылки из прямоугольных и круглых областей 
+                картинки (HTML-тег map):
+                <br>
+                <img src="res/cat_and_dog.jpg" 
+                    width="412"
+                    height="320"
+                    alt="Кошка и собака"
+                    usemap="#cat_and_dog_map" />
+                <map name="cat_and_dog_map">
+                    <area shape="circle" 
+                        coords="100,100,100" 
+                        href="https://ru.wikipedia.org/wiki/Собака" 
+                        alt="Собака" />
+                    <area shape="rect" 
+                        coords="250,50,400,300" 
+                        href="https://ru.wikipedia.org/wiki/Кошка" 
+                        alt="Кошка" />
+                </map>
+            </li>
+            <li> 
+                <a href="./second_page.html"> 
+                    Относительная ссылка на страницу в текущем каталоге 
+                </a> 
+            </li>
+            <li> 
+                <a href="./about/third_page.html"> 
+                    Относительная ссылка на страницу в каталоге about 
+                </a> 
+            </li>
+            <li>
+                Относительную ссылку на страницу в каталоге уровнем выше 
+                текущего можно найти на этой странице:
+                <a href="./dir1/fourth_page.html"> Страница </a> 
+            </li>
+            <li>
+                Относительную ссылку на страницу в каталоге двумя уровнями
+                выше можно найти на этой странице:
+                <a href="./dir1/subdir1/fifth_page.html"> Страница </a> 
+            </li>
+            <li>
+                Сокращенную ссылку на главную страницу можно 
+                найти на этой странице:
+                <a href="sixth_page.html"> Страница </a> 
+            </li>
+            <li>
+                <a href="sixth_page.html"> 
+                    Сокращенная ссылка на внутреннюю страницу 
+                </a> 
+            </li>
+        </ol>
+         
+        <h2> Форма: </h2>
+        <form id="Какой_то_фрагмент_страницы"
+            action="/"
+            method="POST">
+            <ol>
+                <li>
+                    <label>
+                        Введите имя:
+                        <input name="name"
+                            type="text" 
+                            placeholder="Ваше имя" />
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Введите вашу электронную почту:
+                        <input name="email"
+                            type="email" 
+                            placeholder="Ваша электронная почта" />
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        Введите вашу дату рождения:
+                        <input name="birthdate"
+                            type="date" />
+                    </label>
+                </li>
+                <li>
+                    Выберите ваш пол: 
+                    <br />
+                    <label>
+                        <input type="radio" 
+                            checked="checked"
+                            name="gender" 
+                            value="M" />
+                        Мужской
+                    </label>
+                    <label>
+                        <input type="radio"
+                            name="gender" 
+                            value="W" />
+                        Женский
+                    </label>
+                </li>
+                <li>
+                    Ваше количество конечностей: 
+                    <br />
+                    <label>
+                        <input type="radio"
+                            name="bodyparts" 
+                            value="1" />
+                        1
+                    </label>
+                    <label>
+                        <input type="radio"
+                            name="bodyparts" 
+                            value="2" />
+                        2
+                    </label>
+                    <label>
+                        <input type="radio"
+                            name="bodyparts" 
+                            value="3" />
+                        3
+                    </label>
+                    <label>
+                        <input type="radio"
+                            checked="checked"
+                            name="bodyparts" 
+                            value="4" />
+                        4
+                    </label>
+                </li>
+                <li>
+                    Список с множественным выбором:
+                    <br />
+                    <select name="superpowers"
+                        multiple="multiple">
+                        <option value="Бессмертие"> Бессмертие </option>
+                        <option value="Прохождение_сквозь_стены"> Прохождение сквозь стены </option>
+                        <option value="Левитация"> Левитация </option>
+                    </select>
+                </li>
+                <li>
+                    <label>
+                        Ваша биография:
+                        <br />
+                        <textarea name="biography"> Я родился в </textarea>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" 
+                            checked="checked"
+                            name="contract" />
+                        с контрактом ознакомлен (а)
+                    </label>
+                </li>
+            </ol>
+            <input type="submit" value="Отправить" />
+        </form>
+
+    </body>
+</html>
