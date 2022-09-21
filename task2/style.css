@@ -21,8 +21,7 @@ header {
     height: 200px;
     width: 100%;
     
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 header>div {
@@ -37,7 +36,7 @@ nav>a{
 footer {
     height: 200px;
     font-size: 30px;
-    align-items: center;
+    justify-content: center;
 }
 
 main, nav {
