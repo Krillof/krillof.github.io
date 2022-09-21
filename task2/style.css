@@ -54,12 +54,6 @@ main div{
 
 table {
     background-color: black;
-    margin: 0 auto;
-}
-
-ul, ol {
-    margin: 5px auto;
-    display: block;
 }
 
 li {
