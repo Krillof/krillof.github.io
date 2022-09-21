@@ -57,6 +57,19 @@ main, nav {
     padding: 10px 0;
 }
 
+nav {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+nav>a{
+    margin: 10px 100px;
+}
+
 main div{
     background-color: darkgoldenrod;
     margin: 15px 0;
