@@ -10,8 +10,6 @@ body{
 h1 {
     position: relative;
     left: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 main, header, footer, nav {
@@ -29,6 +27,8 @@ header {
 
 header>div {
     min-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav>a{
