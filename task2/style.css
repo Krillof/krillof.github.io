@@ -58,7 +58,6 @@ main, nav {
 }
 
 nav {
-    flex-grow: 1;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
