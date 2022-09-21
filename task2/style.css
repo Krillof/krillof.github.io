@@ -44,6 +44,12 @@ footer {
     justify-content: center;
 }
 
+footer span {
+    font-size: 40px;
+    position: relative;
+    top: 40px;
+}
+
 main, nav {
     max-width: 960px;
     margin: 10px auto;
