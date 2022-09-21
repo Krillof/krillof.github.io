@@ -16,7 +16,7 @@ main, header, footer, nav {
     background-color:burlywood;
 }
 
-header, footer {
+header {
     display: flex;
     height: 200px;
     width: 100%;
@@ -31,6 +31,7 @@ header>div {
 
 footer {
     font-size: 30px;
+    align-items: center;
 }
 
 main, nav {
