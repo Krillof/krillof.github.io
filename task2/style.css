@@ -60,7 +60,7 @@ table {
 
 ul, ol {
     margin: 5px auto;
-    display: inline-block;
+    display: block;
 }
 
 li {
