@@ -24,7 +24,7 @@ header {
     width: 100%;
     
     justify-content: center;
-    items-align: center;
+    align-items: center;
 }
 
 header>div {
