@@ -1,0 +1,173 @@
+body{
+    background-color: blanchedalmond;
+    margin: 0;
+}
+
+#logo {
+    float: none;
+    width: 75px;
+    height: 75px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+main, header, footer, nav {
+    background-color:burlywood;
+    max-width: 700px;
+}
+
+header {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav>a{
+    display: inline-block;
+    margin: 10px;
+}
+
+footer {
+    height: 200px;
+    font-size: 30px;
+    justify-content: center;
+}
+
+footer span {
+    font-size: 40px;
+    position: relative;
+    top: 70px;
+    margin-left: 10px;
+}
+
+main, nav {
+    margin: 10px auto;
+    padding: 10px 0;
+}
+
+main div{
+    background-color: darkgoldenrod;
+    margin: 15px 0;
+    padding: 5px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#table-part {
+    order: 2;
+}
+
+#form-part {
+    order: 1;
+}
+
+table {
+    background-color: black;
+}
+
+li {
+    margin: 5px auto;
+}
+
+th {
+    background-color:olive;
+}
+
+td {
+    background-color: khaki;
+}
+
+td:nth-child(even){
+    background-color: plum;
+}
+
+.picture {
+    width: 250px;
+    height: 190px;
+}
+
+@media screen and (min-width: 800px) {
+
+    #logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    main, nav {
+        max-width: 960px;
+    }
+
+    header, footer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    header {
+        display: flex;
+        height: 200px;
+    }
+
+    header>div {
+        min-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+
+        flex-direction: row;
+        justify-content: none;
+        align-items: none;
+    }
+
+    h1 {
+        position: relative;
+        left: 50px;
+        top: 40px;
+    }
+
+    #logo {
+        float: left;
+    }
+
+    #table-part {
+        order: 1;
+    }
+    
+    #form-part {
+        order: 2;
+    }
+
+    .picture {
+        width: 412px;
+        height: 260px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav>a {
+        margin: 10px auto;
+    }
+}
+
