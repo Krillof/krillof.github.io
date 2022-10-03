@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <title> Основная страница </title>
+
+        <script 
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+        </script>
+
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+        </script>
+
+        <link 
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+        </script>
+
+        <link 
+            rel="stylesheet" 
+            href="style.css">
+
+    </head>
+    <body>
+        <header class="my-3">
+            <div>
+                <img 
+                    src="https://i.pinimg.com/736x/18/e2/8a/18e28a2af12b0965ab3fb32ea65f48e8.jpg"
+                    width="200"
+                    height="200" 
+                    alt="лого"
+                    id="logo">
+                <h1> Название сайта </h1>
+            </div>
+        </header>
+        <nav class="row mx-auto py-2">
+            <div class="col-md-2"></div>
+
+            <a href="#hyperlinks-part" class="col-md-1 py-2">
+                Гиперссылки
+            </a>
+
+            <div class="col-md-2"></div>
+            
+            <a href="#table-part" class="col-md-1 py-2">
+                Таблица
+            </a> 
+
+            <div class="col-md-2"></div>
+            
+            <a href="#form-part" class="col-md-1 py-2">
+                Форма
+            </a>
+
+            <div class="col-md-2"></div>
+        </nav>
+        <main class="mx-auto my-3">
+            <div id="hyperlinks-part" class="my-2 py-2 px-2">
+                <h2> Гиперссылки: </h2>
+                <ol id="linklist">
+                    <li> 
+                        <a href="http://example.com/"> 
+                            Абсолютная гиперссылка на главную 
+                            страницу сайта example.com 
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="https://example.com/"> 
+                            Абсолютная гиперссылка на главную страницу 
+                            сайта example.com в протоколе https 
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="ftp://ftp.mccme.ru"> 
+                            Ссылка на файл на сервере FTP без авторизации 
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="ftp://artem:123@ftp.mccme.ru"> 
+                            Ссылка на файл на сервере FTP с авторизацией 
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="https://www.rgo.ru/ru#main-content"> 
+                            Cсылка на фрагмент страницы некоторого сайта 
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="#myform"> 
+                            Ссылка на фрагмент текущей страницы 
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="http://example.com/?a=10&b=15">
+                            Cсылка с двумя параметрами в URL 
+                        </a> 
+                    </li>
+                    <li>
+                        <p>
+                            Список ссылок основной навигации сайта 
+                            с подписями title:
+                        </p>
+                        <p>
+                            Ниже приведён список навигации по этому
+                            одностраничному сайту.
+                        </p>
+                        <ul>
+                            <li>
+                                <label>
+                                    <a  href="#linklist"
+                                        title="Отправит в начало страницы">
+                                        Список гиперссылок
+                                    </a>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <a  href="#myform"
+                                        title="Отправит к форме">
+                                        Форма
+                                    </a>
+                                </label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li> <a> Ссылка без href </a> </li>
+                    <li> <a href=""> Ссылка с пустым href </a> </li>
+                    <li> 
+                        <a href="http://example.com/" 
+                            rel="nofollow"> 
+                            Cсылка, по которой запрещен 
+                            переход поисковикам 
+                        </a> 
+                    </li>
+                    <li> 
+                        <!--noindex--> 
+                            <a href="http://example.com/" 
+                                rel="nofollow"> 
+                                Cсылка, запрещенная 
+                                для индексации поисковиками 
+                            </a> 
+                        <!--/noindex--> 
+                    </li>
+                    <li>
+                        Тут есть 
+                        <a href="http://example.com/"> 
+                            контекстная ссылка в тексте абзаца 
+                        </a> 
+                        и на неё можно нажать
+                    </li>
+                    <li>
+                        Ссылка-изображение:
+                        <br>
+                        <a href="https://ru.wikipedia.org/wiki/Настоящие_тюлени"> 
+                            <img src="https://n1s1.hsmedia.ru/e2/c5/ee/e2c5eeaddfcd188b7d311f925db58d29/1000x600_21_e895c1a7bef0bd7e43b8c569a442ab50@1200x800_0xac120003_16616836211615828910.jpg"
+                                width="412"
+                                height="273" 
+                                alt="Тюлень"
+                                class="picture">
+                        </a>
+                    </li>
+                    <li>
+                        Ссылки из прямоугольных и круглых областей 
+                        картинки (HTML-тег map):
+                        <br>
+                        <img src="https://static.life.ru/posts/2017/04/1000912/48f49f01921ae5a76c426085d50825a9.jpg" 
+                            width="412"
+                            height="320"
+                            alt="Кошка и собака"
+                            usemap="#cat_and_dog_map"
+                            class="picture">
+                        <map name="cat_and_dog_map">
+                            <area shape="circle" 
+                                coords="100,100,100" 
+                                href="https://ru.wikipedia.org/wiki/Собака" 
+                                alt="Собака">
+                            <area shape="rect" 
+                                coords="250,50,400,300" 
+                                href="https://ru.wikipedia.org/wiki/Кошка" 
+                                alt="Кошка">
+                        </map>
+                    </li>
+                    <li> 
+                        <a href="./second_page.html"> 
+                            Относительная ссылка на страницу 
+                            в текущем каталоге 
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="./about/third_page.html"> 
+                            Относительная ссылка на страницу в каталоге about 
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="../another_page.html">
+                            Относительная ссылка на страницу в каталоге 
+                            уровнем выше текущего 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../another_page2.html"> 
+                            Относительная ссылка на страницу в каталоге 
+                            двумя уровнями выше
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/"> 
+                            Сокращенная ссылка на главную страницу
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="another_page4.html"> 
+                            Сокращенная ссылка на внутреннюю страницу 
+                        </a> 
+                    </li>
+                </ol>
+            </div>
+            <div id="table-part" class="my-2 py-2 px-2">
+                <h2> Таблица: </h2>
+
+                <p>
+                    Какое домашнее животное лучше?
+                    Чтобы это понять, посмотрите на
+                    таблицу:
+                </p>
+
+                <table>
+                    <tr>
+                        <th> </th>
+                        <th> Собаки </th>
+                        <th> Попугаи </th>
+                        <th> Коты </th>
+                        <th> Хомяки </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Для активных
+                        </td>
+                        <td colspan="1" rowspan="2">
+                            Да
+                        </td>
+                        <td colspan="3">
+                            Нет
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Кричат
+                        </td>
+                        <td colspan="3">
+                            Нет
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Обучаемы
+                        </td>
+                        <td>
+                            Да
+                        </td>
+                        <td>
+                            Да
+                        </td>
+                        <td>
+                            Трудно
+                        </td>
+                        <td>
+                            Трудно
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Живут
+                        </td>
+                        <td>
+                            10-13 лет
+                        </td>
+                        <td>
+                            10-15 лет
+                        </td>
+                        <td>
+                            8-25 лет
+                        </td>
+                        <td>
+                            2-3 года
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Размер
+                        </td>
+                        <td>
+                            Меньше человека
+                        </td>
+                        <td>
+                            Меньше кошки
+                        </td>
+                        <td>
+                            Меньше собаки
+                        </td>
+                        <td>
+                            Меньше попугая
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Надо кормить
+                        </td>
+                        <td colspan="4">
+                            Да
+                        </td>
+                    </tr>
+                  </table>
+            </div>
+            <div id="form-part" class="my-2 py-2 px-2">
+                <h2> Форма: </h2>
+                <form id="myform"
+                    action="/"
+                    method="POST">
+                    <ol>
+                        <li>
+                            <label>
+                                Введите имя:
+                                <input name="name"
+                                    type="text" 
+                                    placeholder="Ваше имя">
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                Введите вашу электронную почту:
+                                <input name="email"
+                                    type="email" 
+                                    placeholder="Ваша электронная почта">
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                Введите вашу дату рождения:
+                                <input name="birthdate"
+                                    type="date">
+                            </label>
+                        </li>
+                        <li>
+                            Выберите ваш пол: 
+                            <br >
+                            <label>
+                                <input type="radio" 
+                                    checked="checked"
+                                    name="gender" 
+                                    value="M">
+                                Мужской
+                            </label>
+                            <label>
+                                <input type="radio"
+                                    name="gender" 
+                                    value="W">
+                                Женский
+                            </label>
+                        </li>
+                        <li>
+                            Ваше количество конечностей: 
+                            <br >
+                            <label>
+                                <input type="radio"
+                                    name="bodyparts" 
+                                    value="1">
+                                1
+                            </label>
+                            <label>
+                                <input type="radio"
+                                    name="bodyparts" 
+                                    value="2">
+                                2
+                            </label>
+                            <label>
+                                <input type="radio"
+                                    name="bodyparts" 
+                                    value="3">
+                                3
+                            </label>
+                            <label>
+                                <input type="radio"
+                                    checked="checked"
+                                    name="bodyparts" 
+                                    value="4">
+                                4
+                            </label>
+                        </li>
+                        <li>
+                            Список с множественным выбором:
+                            <br >
+                            <select name="superpowers"
+                                multiple="multiple">
+                                <option value="Бессмертие"> 
+                                    Бессмертие 
+                                </option>
+                                <option value="Прохождение_сквозь_стены"> 
+                                    Прохождение сквозь стены 
+                                </option>
+                                <option value="Левитация"> 
+                                    Левитация 
+                                </option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>
+                                Ваша биография:
+                                <br >
+                                <textarea name="biography"> 
+                                    Я родился в
+                                </textarea>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" 
+                                    checked="checked"
+                                    name="contract">
+                                с контрактом ознакомлен (а)
+                            </label>
+                        </li>
+                    </ol>
+                    <input type="submit" 
+                        value="Отправить">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <span>
+                (C) Крылов Артём 2022    
+            </span>
+        </footer>
+        
+
+    </body>
+</html>
