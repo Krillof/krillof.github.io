@@ -1,4 +1,4 @@
-function hide_all(){
+function hide_all() {
     var on_bread_div = document.getElementById("on_bread_div");
     var on_coffee_div = document.getElementById("on_coffee_div");
 
@@ -6,44 +6,40 @@ function hide_all(){
     on_coffee_div.hidden = true;
 }
 
-function on_bread(){
+function on_bread() {
     var on_bread_div = document.getElementById("on_bread_div");
-    on_bread_div.hidden = false;
-
     var bread_type1_rb = document.getElementById("bread_type1_rb");
     var bread_type2_rb = document.getElementById("bread_type2_rb");
-    var bread_types = [bread_type1_rb, bread_type2_rb];
-
     var add_price = 0;
 
-    for (type of bread_types){
-        if (type.checked){
-            add_price = type.dataset.addprice;
-        }
+    on_bread_div.hidden = false;
+
+    if (bread_type1_rb.checked) {
+        add_price = bread_type1_rb.dataset.addprice;
     }
-    
+    if (bread_type2_rb.checked) {
+        add_price = bread_type2_rb.dataset.addprice;
+    }
     return add_price;
 }
 
-function on_coffee(){
+function on_coffee() {
     var on_coffee_div = document.getElementById("on_coffee_div");
-    on_coffee_div.hidden = false;
-
     var with_sugar_checkbox = document.getElementById("with_sugar_checkbox");
-    
-    if (with_sugar_checkbox.checked){
+
+    on_coffee_div.hidden = false;
+    if (with_sugar_checkbox.checked) {
         return with_sugar_checkbox.dataset.addprice;
     } else {
         return 0;
     }
 }
 
-function changed_amount_recount(price, add_price){
+function changed_amount_recount(price, add_price) {
     var amount_input = document.getElementById("amount_input");
     var answer_element = document.getElementById("answer_element");
 
     var check_is_number = /^[0-9]+$/;
-    
     var wrong_data = "Неправильный формат ввода! Вводить только цифры!";
 
     var check1 = check_is_number.test(amount_input.value);
@@ -51,9 +47,15 @@ function changed_amount_recount(price, add_price){
     var check3 = check_is_number.test(add_price);
 
     var ans = 0;
+    var a;
+    var b;
+    var c;
 
-    if (check1 && check2 && check3){
-        ans = ((Number(price) + Number(add_price)) * Number(amount_input.value));
+    if (check1 && check2 && check3) {
+        a = Number(price);
+        b = Number(add_price);
+        c = Number(amount_input.value);
+        ans = ((a + b) * c);
         answer_element.innerText = "Ответ: " + ans;
     } else {
         answer_element.innerText = wrong_data;
@@ -61,25 +63,22 @@ function changed_amount_recount(price, add_price){
 }
 
 
-function changed_select(){
+function changed_select() {
     var product_select = document.getElementById("product_select");
     var selected = product_select.options[product_select.selectedIndex];
     hide_all();
 
-    switch (product_select.value){
-        case "random_book":
-            changed_amount_recount(selected.dataset.price, 0);
+    switch (product_select.value) {
+    case "bread":
+        changed_amount_recount(selected.dataset.price, on_bread());
         break;
-
-        case "bread":
-            changed_amount_recount(selected.dataset.price, on_bread());
+    case "coffee":
+        changed_amount_recount(selected.dataset.price, on_coffee());
         break;
-        
-        case "coffee":
-            changed_amount_recount(selected.dataset.price, on_coffee());
+    case "random_book":
+        changed_amount_recount(selected.dataset.price, 0);
         break;
     }
-    
 }
 
 function changed_amount() {
@@ -88,14 +87,13 @@ function changed_amount() {
 
 function main() {
     var amount_input = document.getElementById("amount_input");
-    amount_input.addEventListener("keyup", changed_amount);
-
     var product_select = document.getElementById("product_select");
-    product_select.addEventListener("change", changed_select);
-
     var bread_type1_rb = document.getElementById("bread_type1_rb");
     var bread_type2_rb = document.getElementById("bread_type2_rb");
     var on_coffee_div = document.getElementById("on_coffee_div");
+
+    amount_input.addEventListener("keyup", changed_amount);
+    product_select.addEventListener("change", changed_select);
     bread_type1_rb.addEventListener("change", changed_select);
     bread_type2_rb.addEventListener("change", changed_select);
     on_coffee_div.addEventListener("change", changed_select);
