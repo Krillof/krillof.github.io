@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <title> JavaScript </title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+
+    <h5> Выберите товар: </h5>
+    <select id="product_select">
+        <option value="random_book" data-price="1000">
+            Случайная книга
+        </option>
+        <option value="bread" data-price="40">
+            Хлеб
+        </option>
+        <option value="coffee" data-price="110">
+            Кофе
+        </option>
+    </select>
+    <div hidden id="on_bread_div">
+        <h5> Какой хлеб? </h5>
+        <span> Белый </span> <input data-addprice="0" type="radio" id="bread_type1_rb" name="bread_type" checked>
+        <span> Чёрный </span> <input data-addprice="10" type="radio" id="bread_type2_rb" name="bread_type">
+    </div>
+    <div hidden id="on_coffee_div">
+        <h5> С сахаром? </h5>
+        <span> Да </span> <input data-addprice="20" type="checkbox" id="with_sugar_checkbox">
+    </div>
+    <h5> Количество товара: </h5>
+    <input type="text" id="amount_input">
+    <h5 id="answer_element"> Ждём данных... </h5>
+
+
+</body>
+</html>
