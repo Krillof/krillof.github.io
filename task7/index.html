@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <title> JavaScript </title>
+
+    <link rel="stylesheet" type="text/css" href="./slick/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick/slick-theme.css"/>
+    <style>
+        
+        body {
+            background-color: antiquewhite;
+        }
+
+        .decorator {
+            height: 500px;
+            width: 400px;
+        }
+
+        #dots {
+            width: 200px;
+            margin-left: 20px;
+        }
+
+        .slick-dots {
+            position: relative;
+        }
+
+        .slick-dots li button:before {
+            content: '•';
+        }
+
+        .slick-next:before {
+            color:orangered;
+            content: '>';
+        }
+
+        .slick-prev:before {
+            color:orangered;
+            content: '<';
+        }
+
+        .gallery {
+            width: 200px;
+            margin-left: 20px;
+            margin-bottom: 0px;
+        }
+
+        .slick-slider {
+            margin-bottom: 0px !important;
+        }
+
+        .gallery img{
+            width: 200px;
+        }
+
+        @media screen and (min-width: 500px) {
+            .gallery {
+                width: 400px;
+            }
+
+            #dots {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="decorator">
+        <div class="gallery">
+        
+        </div>
+        <div id="dots"></div>
+    </div>    
+    
+    
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
