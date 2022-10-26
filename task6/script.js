@@ -57,10 +57,10 @@ function changed_amount_recount(price, add_price) {
     var c;
 
     if (check1 && check2 && check3) {
+        a = Number(price);
+        b = Number(add_price);
+        c = Number(amount_input.value);
         if (a >= 0 && b >= 0 && c >= 0){
-            a = Number(price);
-            b = Number(add_price);
-            c = Number(amount_input.value);
             ans = ((a + b) * c);
             answer_element.innerText = "Ответ: " + ans;
         } else {
