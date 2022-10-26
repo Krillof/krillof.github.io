@@ -56,14 +56,6 @@ main {
     flex-direction: column;
 }
 
-#table-part {
-    order: 2;
-}
-
-#form-part {
-    order: 1;
-}
-
 table {
     background-color: black;
 }
@@ -125,14 +117,6 @@ td:nth-child(even){
 
     #logo {
         float: left;
-    }
-
-    #table-part {
-        order: 1;
-    }
-    
-    #form-part {
-        order: 2;
     }
 
     .picture {
