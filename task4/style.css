@@ -71,7 +71,7 @@ td:nth-child(even){
         height: 200px;
     }
 
-    header>div {
+    #inheader {
         width: 960px;   
     }
 
