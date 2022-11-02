@@ -24,6 +24,8 @@ header {
     height: 300px;
 }
 
+
+
 main div{
     background-color: darkgoldenrod;
 }
@@ -70,7 +72,7 @@ td:nth-child(even){
     }
 
     header>div {
-        min-width: 960px;
+        width: 960px;   
     }
 
     .picture {
