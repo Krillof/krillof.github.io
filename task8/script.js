@@ -1,21 +1,23 @@
 
+function changePopupHiddenState(isHidden){
+    var popup_background = document.getElementById("popup_background");
+    popup_background.hidden = isHidden;
+}
 
 function startPopup(e){
     e.preventDefault();
-    var popup_background = document.getElementById("popup_background");
-    popup_background.hidden = false;
-
+    changePopupHiddenState(false);
     
     window.history.forward();
 }
 
 function closePopup(e){
     e.preventDefault();
-    var popup_background = document.getElementById("popup_background");
-    popup_background.hidden = true;
+    changePopupHiddenState(true);
 
     window.history.back();
 }
+
 
 function formSubmit(e){
     e.preventDefault();
@@ -44,8 +46,8 @@ function personalDataCheckboxSaving(){
 
 function main(){
     
-    window.history.replaceState({}, "", "nopopup");
-    window.history.pushState({}, "", "popup");
+    window.history.replaceState({page:"nopopup"}, "", "nopopup");
+    window.history.pushState({page:"popup"}, "", "popup");
 
 
     var justbutton = document.getElementById("justbutton");
@@ -60,8 +62,6 @@ function main(){
     var textInput = document.getElementById("textInput");
     var personalDataCheckbox = document.getElementById("personalDataCheckbox");
 
-    console.log(localStorage['personaldatacheckboxdata'])
-
     if (localStorage['nameinputdata']){
         nameInput.value = localStorage['nameinputdata'];
     }
@@ -71,7 +71,7 @@ function main(){
     }
 
     if (localStorage['textinputdata']){
-        textInput.value = localStorage['textinputdata'] == "on";
+        textInput.value = localStorage['textinputdata'];
     }
 
     if (localStorage['personaldatacheckboxdata']){
@@ -84,5 +84,11 @@ function main(){
     personalDataCheckbox.onclick = personalDataCheckboxSaving;
 }
 
+function changeState(){
+    if (history.state.page == "nopopup"){
+        changePopupHiddenState(true);
+    }
+}
 
 document.addEventListener("DOMContentLoaded", main);
+window.addEventListener("onpopstate", changeState)
