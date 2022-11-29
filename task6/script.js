@@ -1,3 +1,7 @@
+function isNumberString(n){
+    return !isNaN(n);
+}
+
 function hide_all() {
     var on_bread_div = document.getElementById("on_bread_div");
     var on_coffee_div = document.getElementById("on_coffee_div");
@@ -41,10 +45,11 @@ function changed_amount_recount(price, add_price) {
 
     var check_is_number = /^[0-9]+$/;
     var wrong_data = "Неправильный формат ввода! Вводить только цифры!";
-
-    var check1 = check_is_number.test(amount_input.value);
-    var check2 = check_is_number.test(price);
-    var check3 = check_is_number.test(add_price);
+    var not_negative = "Значения должны быть положительными!";
+    
+    var check1 = isNumberString(amount_input.value);
+    var check2 = isNumberString(price);
+    var check3 = isNumberString(add_price);
 
     var ans = 0;
     var a;
@@ -55,8 +60,12 @@ function changed_amount_recount(price, add_price) {
         a = Number(price);
         b = Number(add_price);
         c = Number(amount_input.value);
-        ans = ((a + b) * c);
-        answer_element.innerText = "Ответ: " + ans;
+        if (a >= 0 && b >= 0 && c >= 0){
+            ans = ((a + b) * c);
+            answer_element.innerText = "Ответ: " + ans;
+        } else {
+            answer_element.innerText = not_negative;
+        }
     } else {
         answer_element.innerText = wrong_data;
     }

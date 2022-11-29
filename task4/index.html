@@ -27,14 +27,14 @@
     </head>
     <body>
         <header class="my-3">
-            <div>
+            <div id="inheader" class="row mx-auto">
                 <img 
                     src="https://i.pinimg.com/736x/18/e2/8a/18e28a2af12b0965ab3fb32ea65f48e8.jpg"
                     width="200"
                     height="200" 
                     alt="лого"
                     id="logo">
-                <h1> Название сайта </h1>
+                <h1 class="my-auto mx-5"> Название сайта </h1>
             </div>
         </header>
         <nav class="row mx-auto py-2">
@@ -394,7 +394,7 @@
                         <li>
                             Список с множественным выбором:
                             <br >
-                            <select name="superpowers"
+                            <select name="superpowers[]"
                                 multiple="multiple">
                                 <option value="Бессмертие"> 
                                     Бессмертие 
@@ -430,10 +430,8 @@
                 </form>
             </div>
         </main>
-        <footer>
-            <span>
+        <footer class="py-5">
                 (C) Крылов Артём 2022    
-            </span>
         </footer>
         
 
