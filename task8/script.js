@@ -55,11 +55,12 @@ function main(){
                 data: $(this).serialize(),
                 success: function(response){
                     if(response.status == "success"){
-                        alert("We received your submission, thank you!");
+                        console.log("We received your submission, thank you!");
                     }else{
-                        alert("An error occured: " + response.message);
+                        console.log("An error occured: " + response.message);
                     }
                 }
+                
             });
         });
     });
