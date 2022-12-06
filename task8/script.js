@@ -55,9 +55,9 @@ function main(){
                 data: $(this).serialize(),
                 success: function(response){
                     if(response.status == "success"){
-                        console.log("We received your submission, thank you!");
+                        alert("We received your submission, thank you!");
                     }else{
-                        console.log("An error occured: " + response.message);
+                        alert("An error occured: " + response.message);
                     }
                 },
                 error: function(jqXHR, errorString){
