@@ -30,6 +30,7 @@ function formSubmit(e){
         console.log("success")
     } else {
         console.log("failure")
+        console.log(xhr.status + " " + xhr.statusText)
     }
 }
 
