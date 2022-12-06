@@ -59,6 +59,9 @@ function main(){
                     }else{
                         console.log("An error occured: " + response.message);
                     }
+                },
+                error: function(jqXHR, errorString){
+                    console.log(errorString)
                 }
                 
             });
