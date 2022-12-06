@@ -22,16 +22,25 @@ function closePopup(e){
 function formSubmit(e){
     e.preventDefault();
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://formcarry.com/s/iiSFErjCD', false);
-    xhr.send();
-
-    if (xhr.status == 200){
-        console.log("success")
-    } else {
-        console.log("failure")
-        console.log(xhr.status + " " + xhr.statusText)
-    }
+    $(function(){
+        $("#justform").submit(function(e){
+            e.preventDefault();
+            var href = $(this).attr("action");
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: href,
+                data: $(this).serialize(),
+                success: function(response){
+                    if(response.status == "success"){
+                        alert("We received your submission, thank you!");
+                    }else{
+                        alert("An error occured: " + response.message);
+                    }
+                }
+            });
+        });
+    });
 }
 
 function nameInputSaving(){
