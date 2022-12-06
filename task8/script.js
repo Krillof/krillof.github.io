@@ -21,6 +21,16 @@ function closePopup(e){
 
 function formSubmit(e){
     e.preventDefault();
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://formcarry.com/s/iiSFErjCD', false);
+    xhr.send();
+
+    if (xhr.status == 200){
+        console.log("success")
+    } else {
+        console.log("failure")
+    }
 }
 
 function nameInputSaving(){
