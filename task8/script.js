@@ -18,31 +18,6 @@ function closePopup(e){
     window.history.back();
 }
 
-
-function formSubmit(e){
-    e.preventDefault();
-
-    $(function(){
-        $("#justform").submit(function(e){
-            e.preventDefault();
-            var href = $(this).attr("action");
-            $.ajax({
-                type: "POST",
-                dataType: "json",
-                url: href,
-                data: $(this).serialize(),
-                success: function(response){
-                    if(response.status == "success"){
-                        alert("We received your submission, thank you!");
-                    }else{
-                        alert("An error occured: " + response.message);
-                    }
-                }
-            });
-        });
-    });
-}
-
 function nameInputSaving(){
     var nameInput = document.getElementById("nameInput");
     localStorage['nameinputdata'] = nameInput.value;
@@ -69,13 +44,31 @@ function main(){
     window.history.replaceState({page:"nopopup"}, "", "nopopup");
     window.history.pushState({page:"popup"}, "", "popup");
 
+    $(function(){
+        $("#justform").submit(function(e){
+            e.preventDefault();
+            var href = $(this).attr("action");
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: href,
+                data: $(this).serialize(),
+                success: function(response){
+                    if(response.status == "success"){
+                        alert("We received your submission, thank you!");
+                    }else{
+                        alert("An error occured: " + response.message);
+                    }
+                }
+            });
+        });
+    });
+
 
     var justbutton = document.getElementById("justbutton");
     justbutton.onclick = startPopup;
     var closebutton = document.getElementById("closebutton");
     closebutton.onclick = closePopup;
-    var justform = document.getElementById("justform");
-    justform.onsubmit = formSubmit;
 
     var nameInput = document.getElementById("nameInput");
     var emailInput = document.getElementById("emailInput");
