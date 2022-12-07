@@ -41,8 +41,9 @@ function personalDataCheckboxSaving(){
 
 function main(){
     
-    window.history.replaceState({page:"nopopup"}, "", "nopopup");
+    window.history.pushState({page:"nopopup"}, "", "nopopup");
     window.history.pushState({page:"popup"}, "", "popup");
+    window.history.back();
 
     $(function(){
         $("#justform").submit(function(e){
@@ -102,7 +103,7 @@ function main(){
 }
 
 function changeState(){
-    if (history.state.page == "nopopup"){
+    if (window.history.state.page == "nopopup"){
         changePopupHiddenState(true);
     }
 }
