@@ -112,4 +112,4 @@ function changeState(){
 }
 
 document.addEventListener("DOMContentLoaded", main);
-window.addEventListener("onpopstate", changeState)
+window.addEventListener("popstate", changeState)
