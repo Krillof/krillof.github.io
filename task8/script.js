@@ -103,6 +103,7 @@ function main(){
 }
 
 function changeState(){
+    console.log("change state");
     if (window.history.state.page == "nopopup"){
         changePopupHiddenState(true);
     }
