@@ -106,6 +106,9 @@ function changeState(){
     if (window.history.state.page == "nopopup"){
         changePopupHiddenState(true);
     }
+    if (window.history.state.page == "popup"){
+        changePopupHiddenState(false);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", main);
